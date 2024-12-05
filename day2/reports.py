@@ -100,21 +100,22 @@ def part1(file):
 # brute force approach
 def part2(file):
     with open(file) as f:
-        count = 0
+        counter = 0
         for line in f:
             report = [int(elt) for elt in line.split(" ")]
             if check_reports(report):
-                count +=1
+                counter +=1
+    
             else:
                 for count in range(0, len(report)):
                     new_list = report.copy()
                     del new_list[count]
                     if check_reports(new_list):
-                        count +=1
+                        counter += 1
                         break
 
-    print(count)
+    print(counter)
 
 
 # check_reports_damper([1,2, 6, 5, 7])
-part1("input.txt")
+part2("input.txt") 
