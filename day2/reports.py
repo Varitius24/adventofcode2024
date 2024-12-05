@@ -90,7 +90,7 @@ def part1(file):
         count = 0
         for line in f:
             report = [int(elt) for elt in line.split(" ")]
-            if check_reports_damper(report):
+            if check_reports(report):
                 count +=1
                 if [1, 1, 2, 3, 4] == report:
                     print("AAAA")
@@ -117,4 +117,4 @@ def part2(file):
 
 
 # check_reports_damper([1,2, 6, 5, 7])
-part2("input.txt")
+part1("input.txt")
