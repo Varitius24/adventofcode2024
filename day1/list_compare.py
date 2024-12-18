@@ -33,4 +33,4 @@ def part2(a,b):
 
 
 a,b,c = part1("input.txt")
-part2(a,b)
+part1(a,b)
